@@ -18,3 +18,11 @@ INSERT INTO groceries VALUES(6, "Chocolate syrup", 1, 4);
 -- Make query in the database :
 SELECT * FROM groceries WHERE aisle > 5 ORDER BY aisle;
 -- Order the products from aisles to be more efficient (split the store in 2 )
+
+-- AGREGATE FUNCTION:
+-- got total store in database in what aisle 
+SELECT aisle, SUM(quantity) FROM groceries GROUP BY aisle;
+-- Always groupe by aisle 
+-- Know whats the most bought trhough the item : use MAX(quantity)
+
+
